@@ -1,0 +1,66 @@
+# Local tooling and configuration
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+!.env.example
+konnect.toml
+
+# KiCad session state, automatic history and backups
+.history/
+*.kicad_prl
+*.lck
+~*.lck
+*-backups/
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+fp-info-cache
+_autosave-*
+_saved_*
+
+# Rebuildable bundles, caches and local experiments
+*.zip
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+Thumbs.db
+build/
+dist/
+*.o
+*.out
+tools/inspect-step
+tools/inspect-usb-faces
+tools/inspect-step.cpp
+tools/inspect-usb-faces.cpp
+tools/plan-v1.1-routes.py
+
+# Original v1 design and duplicate dependencies; current sources live in v1.1/.
+/enigma-stick-v1.kicad_*
+/fp-lib-table
+/sym-lib-table
+/libraries/
+
+# Download SamacSys SE051 libraries locally; see docs/se051-library-setup.md.
+/v1.1/libraries/SE051C2HQ1.kicad_sym
+/v1.1/libraries/Enigma_SE.pretty/
+/v1.1/models/SE051C2HQ1.stp
+/v1.1/models/SE051C2HQ1.step
+
+# Optional templates and historical/setup notes remain local.
+/.github/
+/docs/baseline-v1/
+/docs/repository.md
+/docs/v1.1-design-brief.md
+/v1.1/README.md
+
+# Keep one board render and the schematic preview.
+/v1.1/reports/*
+!/v1.1/reports/enigma-stick-v1.1-3d.png
+!/v1.1/reports/schematic.png
+
+# Generate manufacturing bundles separately; retain the main component list.
+/v1.1/manufacturing/*
+!/v1.1/manufacturing/JLCPCB-BOM.csv

@@ -1,0 +1,20 @@
+# Preserve serialized CAD files byte-for-byte and require deliberate merge review.
+*.kicad_* -text -merge -whitespace
+fp-lib-table -text -merge -whitespace
+sym-lib-table -text -merge -whitespace
+*.step binary
+*.stp binary
+*.wrl binary
+*.png binary
+*.jpg binary
+*.zip binary
+*.md text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+.githooks/* text eol=lf
+# Keep upstream notices and native exporter formatting intact.
+LICENSES/* -whitespace
+v1.1/manufacturing/*.csv -text -whitespace
+v1.1/reports/*.svg -whitespace
